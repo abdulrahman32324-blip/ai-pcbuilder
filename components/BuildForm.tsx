@@ -72,7 +72,7 @@ export const BuildForm: React.FC<BuildFormProps> = ({ onGenerate, isLoading }) =
                                     name="budget"
                                     value={formData.budget}
                                     onChange={handleBudgetChange}
-                                    min="500"
+                                    min="350"
                                     max="5000"
                                     step="50"
                                     className="flex-1 block w-full rounded-none rounded-r-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
@@ -86,7 +86,7 @@ export const BuildForm: React.FC<BuildFormProps> = ({ onGenerate, isLoading }) =
                                     name="budget"
                                     value={formData.budget}
                                     onChange={handleBudgetChange}
-                                    min="500"
+                                    min="350"
                                     max="5000"
                                     step="50"
                                 />
