@@ -46,7 +46,7 @@ export const BuildCard: React.FC<BuildCardProps> = ({ build, isSaved, isInCompar
     };
 
     return (
-        <div id={cardId} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200 dark:border-gray-700 transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <div id={cardId} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200 dark:border-gray-700 transition-transform transform ">
             <div className="p-6">
                 <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 truncate">{build.buildName}</h3>
                 <p className="text-3xl font-bold text-gray-800 dark:text-gray-100 mt-2">{formatCurrency(build.totalPrice)}</p>
