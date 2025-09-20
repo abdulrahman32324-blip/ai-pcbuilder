@@ -1,10 +1,10 @@
 :root{
   --logo-min:48px;
-  --logo-max:96px;
+  --logo-max:75px;
 }
 
 header{
-  height: 80px;
+  height: 90px;
 }
 /* Shared logo style for header and footer */
 .site-logo{
