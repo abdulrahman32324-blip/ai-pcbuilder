@@ -165,4 +165,5 @@ const App: React.FC = () => {
     );
 };
 
+<Analytics />
 export default App;
