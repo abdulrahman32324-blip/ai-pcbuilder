@@ -116,6 +116,31 @@ export const generateBuilds = async (request: BuildRequest): Promise<PCBuild[]> 
     }
 
     try {
+        // Prefer serverless API when available (production on Vercel)
+
+        // Prefer serverless API when available (production on Vercel)
+        try {
+            const apiResponse = await fetch('/api/generate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ request })
+            });
+            if (apiResponse.ok) {
+                const data = await apiResponse.json();
+                if (Array.isArray(data.builds)) {
+                    return data.builds as PCBuild[];
+                }
+            }
+            // If API route exists but returns error, throw to surface the message
+            if (!apiResponse.ok) {
+                const errText = await apiResponse.text();
+                throw new Error(errText || 'Serverless API error');
+            }
+        } catch (apiErr) {
+            // Fallback to client-side call (useful in local preview)
+            console.warn('Falling back to client-side Gemini call:', apiErr);
+        }
+
         const resolveModelName = (rawModel?: string): string => {
             const DEFAULT_MODEL = "gemini-2.5-flash";
             if (!rawModel) return DEFAULT_MODEL;
