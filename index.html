@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-PCBuilder - AI Gaming PC Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {"50":"#f5f3ff","100":"#ede9fe","200":"#ddd6fe","300":"#c4b5fd","400":"#a78bfa","500":"#8b5cf6","600":"#7c3aed","700":"#6d28d9","800":"#5b21b6","900":"#4c1d95","950":"#2e1065"}
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      .slider-track-progress {
+        background: linear-gradient(to right, #8b5cf6 var(--progress, 0%), #e5e7eb var(--progress, 0%));
+      }
+      .dark .slider-track-progress {
+        background: linear-gradient(to right, #8b5cf6 var(--progress, 0%), #4b5563 var(--progress, 0%));
+      }
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+        width: 100%;
+      }
+      input[type="range"]:focus {
+        outline: none;
+      }
+      input[type="range"]::-webkit-slider-runnable-track {
+        height: 8px;
+        border-radius: 4px;
+      }
+      input[type="range"]::-moz-range-track {
+        height: 8px;
+        border-radius: 4px;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: -6px; /* (track-height - thumb-height) / 2 */
+        background-color: #fff;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 2px solid #8b5cf6;
+      }
+       input[type="range"]:active::-webkit-slider-thumb {
+        transform: scale(1.1);
+        transition: transform 0.1s ease-in-out;
+      }
+      input[type="range"]::-moz-range-thumb {
+        background-color: #fff;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 2px solid #8b5cf6;
+      }
+       input[type="range"]:active::-moz-range-thumb {
+        transform: scale(1.1);
+      }
+      .segmented-control input {
+          display: none;
+      }
+      .segmented-control label {
+          border: 1px solid #d1d5db; /* gray-300 */
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          margin: 0 -0.5px;
+      }
+      .dark .segmented-control label {
+          border-color: #4b5563; /* gray-600 */
+      }
+      .segmented-control label:first-of-type {
+          border-top-left-radius: 0.375rem;
+          border-bottom-left-radius: 0.375rem;
+      }
+      .segmented-control label:last-of-type {
+          border-top-right-radius: 0.375rem;
+          border-bottom-right-radius: 0.375rem;
+      }
+      .segmented-control input:checked + label {
+          background-color: #8b5cf6; /* primary-500 */
+          color: white;
+          border-color: #8b5cf6;
+          z-index: 10;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

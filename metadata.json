@@ -1,0 +1,5 @@
+{
+  "name": "AI-PCBuilder",
+  "description": "An AI-powered gaming PC build generator. Users can input their budget and currency to receive optimized PC builds, complete with component lists, performance estimates, and sharing options. Features include local build saving, side-by-side comparison, PDF export, and multilingual support with a dark mode toggle.",
+  "requestFramePermissions": []
+}
