@@ -116,8 +116,18 @@ export const generateBuilds = async (request: BuildRequest): Promise<PCBuild[]> 
     }
 
     try {
+        const resolveModelName = (rawModel?: string): string => {
+            const DEFAULT_MODEL = "gemini-2.5-flash";
+            if (!rawModel) return DEFAULT_MODEL;
+            const trimmed = rawModel.trim();
+            if (/-(flash|pro)(:latest)?$/i.test(trimmed)) return trimmed;
+            if (/^gemini-2\.5$/i.test(trimmed)) return "gemini-2.5-flash";
+            if (/^gemini-2\.0$/i.test(trimmed)) return "gemini-2.0-flash";
+            return DEFAULT_MODEL;
+        };
+
         const response = await getAI().models.generateContent({
-            model: "gemini-2.5-flash",
+            model: resolveModelName(process.env.GEMINI_MODEL as string),
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
