@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ theme, onToggleTheme, onShowSave
         <header className="bg-slate-50/80 dark:bg-[#0B1120]/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200 dark:border-gray-800">
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                    <img src="/logoo.png" alt="AI-PCBuilder Logo" className="w-16 h-16" />
+                    <img src="/logoo.png" alt="AI-PCBuilder Logo" className="site-logo" />
                 </div>
                 <div className="flex items-center gap-2">
                      {hasSavedBuilds && (

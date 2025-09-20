@@ -1,0 +1,19 @@
+:root{
+  --logo-min:48px;
+  --logo-max:96px;
+}
+
+header{
+  height: 100px;
+}
+/* Shared logo style for header and footer */
+.site-logo{
+  height: clamp(var(--logo-min), 7vw, var(--logo-max));
+  width: auto;
+  display: block;
+}
+
+/* Optional: smaller logo on very small devices */
+@media (max-width: 360px){
+  :root{ --logo-min:40px; }
+}
