@@ -2,13 +2,21 @@ import { GoogleGenAI, Type } from "@google/genai";
 import type { PCBuild, BuildRequest } from '../types';
 import { translations } from "../utils/i18n";
 
-const API_KEY = process.env.API_KEY;
+// Prefer build-time injected keys from Vite (process.env.* is replaced at build time)
+// Fall back to either API_KEY or GEMINI_API_KEY if provided
+const API_KEY = (process.env.API_KEY as string) || (process.env.GEMINI_API_KEY as string);
 
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable is not set.");
-}
+let aiInstance: GoogleGenAI | null = null;
 
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+const getAI = (): GoogleGenAI => {
+  if (!API_KEY) {
+    throw new Error(`${translations.en.error.apiError}: Missing API key. Set API_KEY in environment.`);
+  }
+  if (!aiInstance) {
+    aiInstance = new GoogleGenAI({ apiKey: API_KEY });
+  }
+  return aiInstance;
+};
 
 const buildSchema = {
     type: Type.OBJECT,
@@ -108,7 +116,7 @@ export const generateBuilds = async (request: BuildRequest): Promise<PCBuild[]> 
     }
 
     try {
-        const response = await ai.models.generateContent({
+        const response = await getAI().models.generateContent({
             model: "gemini-2.5-flash",
             contents: prompt,
             config: {
