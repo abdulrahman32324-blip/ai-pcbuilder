@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onLinkClick }) => {
             <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
                 <div className="space-y-4">
                      <div className="flex items-center gap-2">
-                        {ICONS.logo}
+                        <img src="/logoo.png" alt="AI-PCBuilder Logo" className="w-8 h-8" />
                         <span className="text-xl font-bold text-gray-800 dark:text-gray-200">{t.header}</span>
                     </div>
                     <p className="max-w-xs">{t.hero.subtitle}</p>
