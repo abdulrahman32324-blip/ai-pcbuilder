@@ -29,7 +29,7 @@ export const BuildForm: React.FC<BuildFormProps> = ({ onGenerate, isLoading }) =
     const handleBudgetChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const budgetValue = Number(e.target.value);
         setFormData(prev => ({ ...prev, budget: budgetValue }));
-        const progress = (budgetValue - 500) / (5000 - 500) * 100;
+        const progress = (budgetValue - 350) / (5000 - 350) * 100;
         const parent = e.target.closest('.budget-slider-container');
         if (parent instanceof HTMLElement) {
             parent.style.setProperty('--progress', `${progress}%`);
