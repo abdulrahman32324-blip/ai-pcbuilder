@@ -17,3 +17,12 @@ header{
 @media (max-width: 360px){
   :root{ --logo-min:40px; }
 }
+.title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #5f37fe;
+}
