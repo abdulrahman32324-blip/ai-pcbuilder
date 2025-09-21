@@ -1,9 +1,9 @@
 export const translations = {
     en: {
-        header: "AI PC Builder",
+        header: "AI PCBuilder",
         hero: {
             badge: "✨ Build Your Gaming PC with AI ✨",
-            title: "AI PC Builder",
+            title: "AI PCBuilder",
             subtitle: "Enter your budget and get AI-generated gaming PC builds optimized for performance.",
         },
         form: {
@@ -46,30 +46,30 @@ export const translations = {
             build2: "Build 2",
         },
         footer: {
-            copyright: `© ${new Date().getFullYear()} AI PC Builder. All rights reserved.`,
+            copyright: `© ${new Date().getFullYear()} AI PCBuilder. All rights reserved.`,
             about: "About",
             terms: "Terms of Service",
             privacy: "Privacy Policy",
         },
         modals: {
             about: {
-                title: "About AI PC Builder",
-                content: "AI PC Builder is an innovative platform that leverages the power of generative AI to help gamers create their perfect PC builds. We believe that building a custom PC should be an accessible and exciting experience for everyone, regardless of their technical expertise. Our AI analyzes millions of component combinations to find the optimal build for your specific budget and performance needs, taking the guesswork out of the process."
+                title: "About AI PCBuilder",
+                content: "AI PCBuilder is an innovative platform that leverages the power of generative AI to help gamers create their perfect PC builds. We believe that building a custom PC should be an accessible and exciting experience for everyone, regardless of their technical expertise. Our AI analyzes millions of component combinations to find the optimal build for your specific budget and performance needs, taking the guesswork out of the process."
             },
             terms: {
                 title: "Terms of Service",
-                content: "By using AI PC Builder, you agree to our terms. The builds generated are for informational purposes only and based on AI analysis; prices and component availability are subject to change. We are not responsible for any purchasing decisions made based on the information provided. The service is provided 'as is' without warranties of any kind."
+                content: "By using AI PCBuilder, you agree to our terms. The builds generated are for informational purposes only and based on AI analysis; prices and component availability are subject to change. We are not responsible for any purchasing decisions made based on the information provided. The service is provided 'as is' without warranties of any kind."
             },
             privacy: {
                 title: "Privacy Policy",
-                content: "We respect your privacy. AI PC Builder does not collect or store any personal information from its users. All build generation data is processed anonymously. We use local storage on your browser to save your builds and preferences, but this data never leaves your device and is not accessible by us. We do not use cookies for tracking."
+                content: "We respect your privacy. AI PCBuilder does not collect or store any personal information from its users. All build generation data is processed anonymously. We use local storage on your browser to save your builds and preferences, but this data never leaves your device and is not accessible by us. We do not use cookies for tracking."
             },
         },
         savedBuilds: {
             title: "Your Saved Builds"
         },
         share: {
-            text: "Check out this awesome gaming PC build from AI PC Builder!",
+            text: "Check out this awesome gaming PC build from AI PCBuilder!",
             via: "via  PC Builder"
         },
         error: {
