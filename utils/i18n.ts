@@ -82,7 +82,7 @@ export const translations = {
             unknown: "An unknown error occurred.",
         },
         loading: {
-            title: "Crafting Your Builds...",
+            title: "Generating Your Builds...",
             message: "Our AI is analyzing the best components for your budget. This may take a moment."
         },
         prompt: {
