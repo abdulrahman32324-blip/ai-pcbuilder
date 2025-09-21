@@ -16,11 +16,11 @@ export const Header: React.FC<HeaderProps> = ({ theme, onToggleTheme, onShowSave
         <header className="bg-slate-50/80 dark:bg-[#0B1120]/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200 dark:border-gray-800">
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-<a href="http://aipcbuilder.vercel.app">        
-          <img src="/public/logoo.png" alt="AI PCBuilder Logo" className="site-logo" />
-</a>                </div>
+
+                    <img src="/public/logoo.png" alt="AI PCBuilder Logo" className="site-logo" href="http://aipcbuilder.vercel.app" />
+                </div>
                 <div className="flex items-center gap-2">
-                     {hasSavedBuilds && (
+                    {hasSavedBuilds && (
                         <button
                             onClick={onShowSaved}
                             className="p-2 rounded-full flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-colors"
@@ -29,8 +29,8 @@ export const Header: React.FC<HeaderProps> = ({ theme, onToggleTheme, onShowSave
                             {ICONS.savedCollection}
                             <span className="hidden sm:inline text-sm font-semibold">{translations.en.savedBuilds.title}</span>
                         </button>
-                     )}
-                     <button
+                    )}
+                    <button
                         onClick={onToggleTheme}
                         className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-colors"
                         aria-label={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
