@@ -20,7 +20,8 @@ export const InfoModal: React.FC<InfoModalProps> = ({ title, content, onClose })
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="p-5 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                    <h2 className="text-xl font-bold text-primary-600 dark:text-primary-400">{title}</h2>
+
+                    <h2 className="text-xl font-bold text-[#f8fafc]">{title}</h2>
                     <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" aria-label="Close modal">
                         {ICONS.close}
                     </button>

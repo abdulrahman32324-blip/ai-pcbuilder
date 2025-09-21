@@ -48,7 +48,7 @@ export const BuildCard: React.FC<BuildCardProps> = ({ build, isSaved, isInCompar
     return (
         <div id={cardId} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col border border-gray-200 dark:border-gray-700 transition-transform transform ">
             <div className="p-6">
-                <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 truncate">{build.buildName}</h3>
+                <h3 className="text-2xl font-bold text-[#f8fafc] truncate">{build.buildName}</h3>
                 <p className="text-3xl font-bold text-gray-800 dark:text-gray-100 mt-2">{formatCurrency(build.totalPrice)}</p>
                 <div className="flex items-center justify-between mt-4 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-3 font-medium">
                     <span className="flex items-center gap-1.5" title={t.results.targetPerformance}>
@@ -71,7 +71,7 @@ export const BuildCard: React.FC<BuildCardProps> = ({ build, isSaved, isInCompar
                         <li key={i} className="flex justify-between items-start bg-gray-50 dark:bg-gray-700/50 p-2 rounded-md">
                             <span className="font-semibold text-gray-600 dark:text-gray-300 whitespace-nowrap mr-2">{comp.type}</span>
                              <div className="text-right">
-                                <a href={comp.priceLink} target="_blank" rel="noopener noreferrer" className="text-gray-800 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium">
+                                <a href={comp.priceLink} target="_blank" rel="noopener noreferrer" className="text-gray-800 dark:text-gray-200 hover:text-[#f8fafc] transition-colors font-medium">
                                     {comp.name}
                                 </a>
                                 {comp.specs && (
@@ -121,9 +121,9 @@ export const BuildCard: React.FC<BuildCardProps> = ({ build, isSaved, isInCompar
                 <div className="relative group">
                      <ActionButton onClick={() => {}} icon={ICONS.share} text={t.results.share} />
                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-32 bg-white dark:bg-gray-700 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto flex justify-around p-2">
-                         <button onClick={() => handleShare('twitter')} title="Share on Twitter" className="p-2 text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400">{ICONS.twitter}</button>
-                         <button onClick={() => handleShare('whatsapp')} title="Share on WhatsApp" className="p-2 text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400">{ICONS.whatsapp}</button>
-                         <button onClick={handleCopy} title={copyStatus === 'idle' ? t.results.copy : t.results.copied} className="p-2 text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400">
+                         <button onClick={() => handleShare('twitter')} title="Share on Twitter" className="p-2 text-gray-600 dark:text-gray-300 hover:text-[#f8fafc]">{ICONS.twitter}</button>
+                         <button onClick={() => handleShare('whatsapp')} title="Share on WhatsApp" className="p-2 text-gray-600 dark:text-gray-300 hover:text-[#f8fafc]">{ICONS.whatsapp}</button>
+                         <button onClick={handleCopy} title={copyStatus === 'idle' ? t.results.copy : t.results.copied} className="p-2 text-gray-600 dark:text-gray-300 hover:text-[#f8fafc]">
                             {copyStatus === 'copied' ? ICONS.saved : ICONS.copy}
                          </button>
                      </div>

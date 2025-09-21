@@ -21,17 +21,17 @@ export const Footer: React.FC<FooterProps> = ({ onLinkClick }) => {
                 <div className="space-y-2">
                     <h3 className="font-bold text-gray-800 dark:text-gray-200 uppercase tracking-wider">{t.footer.about}</h3>
                     <nav className="flex flex-col space-y-2">
-                     <button onClick={() => onLinkClick('about')} className="text-left hover:text-primary-500 dark:hover:text-primary-400 transition-colors">{t.footer.about}</button>
-                     <h2>By Abdulrahman </h2>
-                     Email:abdulrahman32324@gmail.com
+                        <button onClick={() => onLinkClick('about')} className="text-left hover:text-[#f8fafc] transition-colors">{t.footer.about}</button>
+                        <h2>By Abdelrahman </h2>
+                        Email:abdulrahman32324@gmail.com
                     </nav>
                 </div>
                 
                 <div className="space-y-2">
                     <h3 className="font-bold text-gray-800 dark:text-gray-200 uppercase tracking-wider">Legal</h3>
                      <nav className="flex flex-col space-y-2">
-                        <button onClick={() => onLinkClick('terms')} className="text-left hover:text-primary-500 dark:hover:text-primary-400 transition-colors">{t.footer.terms}</button>
-                        <button onClick={() => onLinkClick('privacy')} className="text-left hover:text-primary-500 dark:hover:text-primary-400 transition-colors">{t.footer.privacy}</button>
+                        <button onClick={() => onLinkClick('terms')} className="text-left hover:text-[#f8fafc] transition-colors">{t.footer.terms}</button>
+                        <button onClick={() => onLinkClick('privacy')} className="text-left hover:text-[#f8fafc] transition-colors">{t.footer.privacy}</button>
                     </nav>
                 </div>
             </div>

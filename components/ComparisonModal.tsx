@@ -49,7 +49,7 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ builds, onClos
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="p-5 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center sticky top-0 bg-white dark:bg-gray-800 z-10">
-                    <h2 className="text-xl font-bold text-purple-600 dark:text-purple-400">{t.comparison.title}</h2>
+                    <h2 className="text-xl font-bold text-[#f8fafc]">{t.comparison.title}</h2>
                     <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" aria-label="Close modal">
                         {ICONS.close}
                     </button>
